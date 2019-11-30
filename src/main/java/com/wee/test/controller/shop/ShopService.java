@@ -3,6 +3,7 @@ package com.wee.test.controller.shop;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 @Service
 public class ShopService {
 
@@ -10,6 +11,8 @@ public class ShopService {
     private ShopRepository repository;
 
     public String report(String shopId) {
-        return "{}";
+    	var shop = repository.findById(shopId).get();
+
+        return shop.getName();
     }
 }

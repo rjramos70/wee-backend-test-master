@@ -38,6 +38,6 @@ class ShopControllerTest {
         var shops = new ObjectMapper().readValue(response, new TypeReference<List<Shop>>(){});
 
         assertFalse(shops.isEmpty());
-        assertEquals(3, shops.size());
+        assertEquals(2, shops.size());
     }
 }

@@ -58,8 +58,10 @@ public class ShopController {
         return repository.save(shop);
     }
 
-    @RequestMapping(path = "/report", method = RequestMethod.POST)
+    @RequestMapping(path = "/report", method = RequestMethod.GET)
     public String report(@RequestParam String id) {
         return service.report(id);
     }
+    
+    
 }
